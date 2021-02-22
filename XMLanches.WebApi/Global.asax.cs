@@ -6,6 +6,10 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using SimpleInjector;
+//using SimpleInjector.Integration.Web.Mvc;
+
+
 
 namespace XMLanches.WebApi
 {
@@ -18,6 +22,16 @@ namespace XMLanches.WebApi
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //var container = new Container();
+            //
+            //container.Register<ILancheRepositor, LancheRepository>(Lifestyle.Transient);
+            //container.Register<ILancheService, LancheService>(Lifestyle.Singleton);
+            //
+            //container.Verify();
+            //
+            //DependencyResolver.SetResolver(
+            //    new SimpleInjectorDependencyResolver(container));
         }
     }
 }
